@@ -7,6 +7,7 @@ from CompareTexts import CompareTexts
 
 import os
 from flask_cors import CORS
+from flask import jsonify
 
 app = Flask(__name__)
 CORS(app)
@@ -16,7 +17,7 @@ def record_voice():
     getEmotion = GetEmotion()
     journal_emotion, journal_entry = getEmotion.getEmotionFromSpeech()
 
-    return {"journal_emotion":str(journal_emotion), "journal_entry":str(journal_entry)}
+    return jsonify({"journal_emotion":str(journal_emotion), "journal_entry":str(journal_entry)})
 
 
 
@@ -55,7 +56,7 @@ def get_playlist():
 
     top_song = compareTexts.compareTexts(journal_entry, lyrics)
 
-    return top_song
+    return jsonify(top_song)
 
 def getMatchingSongs(emotion):
     if emotion == "happy":

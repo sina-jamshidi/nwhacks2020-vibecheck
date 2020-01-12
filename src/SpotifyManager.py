@@ -95,7 +95,7 @@ class SpotifyManager:
 # print(json.dumps(VARIABLE, sort_keys=True, indent=4))
 
 # Initialize the SpotifyManager class with the specified Spotify User ID
-spManager = SpotifyManager('12160864262')
+spManager = SpotifyManager('12178064267')
 
 # example for using parseAudioFeatures():
 # print(json.dumps(spManager.parseAudioFeatures(1), sort_keys=False, indent=4))

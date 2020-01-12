@@ -2,35 +2,132 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Boberick the llama</title>
+        <title>Vibecheck</title>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
     <body>
+        <!-- Michael's code -->
         <section id="homepage">
             <div id="homeContainer">
-                <button type="button" id="getStartedButton">Get Started</button>
+                <!-- <img id="hamburgerMenu1" src="/images/hamburgerMenu.png"> -->
+                <input id="hamburgerMenu1" type="image" src="/images/hamburgerMenu.png" onclick="hideShow('homepage', 'sidebarPage1');">
+                <button type="button" id="getStartedButton" onclick="hideShow('homepage','onBoarding1')">Get Started</button>
                 <button type="button" id="logInButton" onclick="hideShow('homepage','logInPage')">Log in with Spotify</button>
             </div>
         </section>
         <section id="logInPage" style="display: none;">
             <div id="logInContainer">
                 <input id="logInBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('logInPage', 'homepage');"/>
+                <button type="button" id="logInButton2" onclick="hideShow('logInPage','landingPage')">Log in with Spotify</button>
+            </div>
+        </section>
+        <section id="onBoarding1" style="display: none;">
+            <div id="onBoardingContainer">
+                <input id="closeButton1" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('onBoarding1', 'homepage');" style="width: auto; height: auto;"/>
+                <button type="button" id="skip1" class="skipButton" onclick="hideShow('onBoarding1','logInPage')">Skip</button>
+                <button type="button" id="next1" class="nextButton" onclick="hideShow('onBoarding1','onBoarding2')">Next</button>
+            </div>
+        </section>
+        <section id="onBoarding2" style="display: none;">
+            <div id="onBoardingContainer">
+                <input id="closeButton2" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('onBoarding1', 'homepage');" style="width: auto; height: auto;"/>
+                <button type="button" id="skip2" class="skipButton" onclick="hideShow('onBoarding1','logInPage')">Skip</button>
+                <button type="button" id="next2" class="nextButton" onclick="hideShow('onBoarding2','onBoarding3')">Next</button>
+            </div>
+        </section>
+        <section id="onBoarding3" style="display: none;">
+            <div id="onBoardingContainer">
+                <input id="closeButton3" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('onBoarding1', 'homepage');" style="width: auto; height: auto;"/>
+                <button type="button" id="skip3" class="skipButton" onclick="hideShow('onBoarding1','logInPage')">Skip</button>
+                <button type="button" id="next3" class="nextButton" onclick="hideShow('onBoarding3','onBoarding4')">Next</button>
+            </div>
+        </section>
+        <section id="onBoarding4" style="display: none;">
+            <div id="onBoardingContainer">
+                <input id="closeButton4" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('onBoarding1', 'homepage');" style="width: auto; height: auto;"/>
+                <button type="button" id="skip4" class="skipButton" onclick="hideShow('onBoarding1','logInPage')">Skip</button>
+                <button type="button" id="next4" class="nextButton" onclick="hideShow('onBoarding4','logInPage')">Next</button>
             </div>
         </section>
 
-        <section id="landingPage">
+        <!-- Jordan's code -->
+        <section id="landingPage" style="display: none;">
             <div id="onboardingBackground">
-                <img id="hamburgerMenu" src="/images/hamburgerMenu.png">
+                <input id="hamburgerMenu2" type="image" src="/images/hamburgerMenu.png" onclick="hideShow('landingPage', 'sidebarPage2');">
                 <div id="date">January 12, 2020</div>
                 <div id="greetingMessage">Hi, Nicole. <br><br>How was your day?</div>
-                <button type="button" id="recordAudioButton" onclick="hideShow('landingPage', 'audioRecordingPage');">Record Audio</button>
+                <button type="button" id="recordAudioButton" onclick="hideShow('landingPage', 'audioRecordingPage'); recordVoice();">Record Audio</button>
                 <button type="button" id="writeEntryButton">Write Entry</button>
             </div>
         </section>
-        <section id="audioRecordingPage">
+        <section id="audioRecordingPage" style="display: none;">
             <div id="onboardingBackground">
-                <input id="audioRecordBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('audioRecordingPage', 'landingPage');"/>
-                <div id="audioRecordingMessage">Audio</div>
+                <input id="audioRecordBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('audioRecordingPage', 'landingPage');">
+                <div id="audioRecordingMessage">Audio Recording</div>
+                <div id="yourMindMessage">What's on your mind today?</div>
+                <img id="blankBox" src="/images/blankBox.png">
+                <img id="microphone" src="/images/microphone.png">
+                <img id="audioWave" src="/images/audioWave.gif">
+                <input id="pauseStopIcons" type="image" src="/images/pauseStopIcons.png" onclick="hideShow('audioRecordingPage', 'saveRecordingPage');">
+            </div>
+        </section>
+        <section id="saveRecordingPage" style="display: none;">
+            <div id="onboardingBackground">
+                <input id="saveRecordBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('saveRecordingPage', 'audioRecordingPage');">
+                <div id="audioRecordingMessage">Audio Recording</div>
+                <div id="yourMindMessage">What's on your mind today?</div>
+                <img id="blankBox" src="/images/blankBox.png">
+                <img id="floppyDisk" src="/images/floppyDisk.png">
+                <img id="audioWave" src="/images/audioWave.png">
+                <img id="playIcons" src="/images/playIcons.png">
+                <button type="button" id="saveEntryButton" onclick="getSong();">Save Entry</button>
+            </div>
+        </section>
+        <section id="curatingPage" style="display: none;">
+            <div id="onboardingBackground">
+                <input id="curatingBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('curatingPage', 'saveRecordingPage');">
+                <div id="curatingMessage">Curating your mood...</div>
+                <img id="blankBox" src="/images/blankBox.png">
+                <img id="loadingCycle" src="/images/loadingCycle.gif">
+            
+            </div>
+        </section>
+        <section id="todayVibePage" style="display: none;">
+            <div id="onboardingBackground">
+                <input id="todayVibeExit" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('todayVibePage', 'todayVibeLandingPage');">
+                <div id="date">January 12, 2020</div>
+                <div id="todayVibeMessage">Today's vibe check:</div>
+                <img id="spotifyTrackArt" src="/images/llama test.jpg">
+                <div id="songTitle"> Llama Song</div>
+                <div id="artistName"> The Llamas</div>
+                <button type="button" id="listenOnSpotifyButton" onclick="openSpotify();">Listen on Spotify</button>
+                <button type="button" id="shareButton">Share</button>
+            </div>
+        </section>
+        <section id="todayVibeLandingPage" style="display: none;">
+            <div id="onboardingBackground">
+                <input id="hamburgerMenu3" type="image" src="/images/hamburgerMenu.png" onclick="hideShow('todayVibeLandingPage', 'sidebarPage3');">
+                <div id="specificDayVibe">Nicole's<br>January 12 Vibe</div>
+                <img id="spotifyTrackArt2" src="/images/llama test.jpg">
+                <div id="songTitle2"> Llama Song</div>
+                <div id="artistName2"> The Llamas</div>
+                <button type="button" id="listenOnSpotifyButton" onclick="openSpotify();">Listen on Spotify </button>
+                <button type="button" id="shareButton">View past vibechecks</button>
+            </div>
+        </section>
+        <section id="sidebarPage1" style="display: none;">
+            <div id="sidebarBackground">
+                <input id="sidebarExit1" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('sidebarPage1', 'homepage');">
+            </div>
+        </section>
+        <section id="sidebarPage2" style="display: none;">
+            <div id="sidebarBackground">
+                <input id="sidebarExit2" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('sidebarPage2', 'landingPage');">
+            </div>
+        </section>
+        <section id="sidebarPage3" style="display: none;">
+            <div id="sidebarBackground">
+                <input id="sidebarExit3" class="backButton" type="image" src="/images/exitButton.png" onclick="hideShow('sidebarPage3', 'todayVibeLandingPage');">
             </div>
         </section>
 
@@ -38,6 +135,65 @@
             function hideShow(hidePage, showPage) {
                 document.getElementById(hidePage).style.display="none";
                 document.getElementById(showPage).style.display="block";
+            }
+
+            const journal = {"journal_entry":"", "journal_emotion":""};
+            const topSong = {"title":"", "artist":"", "img_url":"", "spotify_url":""};
+            function recordVoice(){
+                const Http = new XMLHttpRequest();
+                const url='http://127.0.0.1:5000/record/';
+                Http.open("GET", url);
+                Http.send();
+                Http.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200){
+                        console.log(Http.responseText);
+                        var data=Http.responseText;
+                        var jsonResponse = JSON.parse(data);
+                        journal.journal_entry = jsonResponse.journal_entry;
+                        journal.journal_emotion = jsonResponse.journal_emotion;
+                    }
+                }
+            }
+
+            async function sleep(milliseconds) {
+                var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i++) {
+                    if ((new Date().getTime() - start) > milliseconds){
+                    break;
+                    }
+                }
+            }
+
+            async function getSong() {
+                hideShow('saveRecordingPage', 'curatingPage');
+
+                const Http = new XMLHttpRequest();
+                const url = `http://127.0.0.1:5000/get_song/?journalem=${journal.journal_emotion}&journalen=${journal.journal_entry}`;
+                Http.open("GET", url);
+                Http.send();
+                Http.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200){
+                        console.log(Http.responseText);
+                        var data=Http.responseText;
+                        var jsonResponse = JSON.parse(data);
+                        topSong.title = jsonResponse.name;
+                        topSong.artist = jsonResponse.artist;
+                        topSong.img_url = jsonResponse.albumPic;
+                        topSong.spotify_url = jsonResponse.uri;
+                        document.getElementById("songTitle").innerHTML = topSong.title;
+                        document.getElementById("songTitle2").innerHTML = topSong.title;
+                        document.getElementById("artistName").innerHTML = topSong.artist;
+                        document.getElementById("artistName2").innerHTML = topSong.artist;
+                        document.getElementById("spotifyTrackArt").src = topSong.img_url;
+                        document.getElementById("spotifyTrackArt2").src = topSong.img_url;
+
+                        hideShow("curatingPage","todayVibePage");
+                    }
+                }
+            }
+
+            function openSpotify(){
+                window.location.href = topSong.spotify_url;
             }
          </script>
     </body>

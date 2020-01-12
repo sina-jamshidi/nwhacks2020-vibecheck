@@ -12,9 +12,27 @@ body {
     margin: auto;
 }
 
-#hamburgerMenu {
+#sidebarBackground {
+    background-image: url('/images/sidebar.png');
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+
+#hamburgerMenu1 {
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 35px;
+}
+
+#hamburgerMenu2 {
     position: absolute;
     margin-left: -20px;
+    margin-top: 25px;
+}
+
+#hamburgerMenu3 {
+    margin-left: -300px;
     margin-top: 25px;
 }
 
@@ -30,6 +48,21 @@ body {
     color: #2c2470;
     position: absolute;
     margin-top: 100px;
+    margin-left: 42px;
+}
+
+#todayVibePage #date {
+    width: 290px;
+    height: 48px;
+    font-family: Avenir;
+    font-size: 35px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #2c2470;
+    position: absolute;
+    margin-top: 50px;
     margin-left: 42px;
 }
 
@@ -98,8 +131,182 @@ body {
     letter-spacing: 0.47px;
     color: #2c2470;
     position: absolute;
-    margin-top: 100px;
+    margin-top: 55px;
+    margin-left: 40px;
+}
+
+#yourMindMessage {
+    width: 303px;
+    height: 86px;
+    font-family: Avenir;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #2c2470;
+    text-align: left;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 43px;
+}
+
+#blankBox {
+    width: 306px;
+    position: absolute;
+    height: 222px;
+    margin-top: 275px;
+    margin-left: -4px;
+}
+
+#pauseStopIcons {
+    width:200px;
+    position: absolute;
+    margin-top: 520px;
+    margin-left: 45px;
+}
+
+#microphone {
+    position: absolute;
+    margin-top: 295px;
+    margin-left: 120px;
+    width: 35px;
+}
+
+#audioWave {
+    width: 150px;
+    height: 120px;
+    position: absolute;
+    margin-top: 370px;
+    margin-left: 70px;
+}
+
+#playIcons {
+    width: 150px;
+    position: absolute;
+    margin-top: 520px;
     margin-left: 42px;
+}
+
+#floppyDisk {
+    position: absolute;
+    margin-top: 295px;
+    margin-left: 120px;
+    width: 35px;
+}
+
+#saveEntryButton {
+    height: 43px;
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.15;
+    letter-spacing: normal;
+    color: #ff786b;
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 80px;
+    border: none;
+    background-color: inherit;
+}
+
+#curatingMessage {
+    width: 242px;
+    height: 106px;
+    font-family: Avenir;
+    font-size: 35px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.51;
+    letter-spacing: 0.47px;
+    color: #2c2470;
+    position: absolute;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 43px;
+}
+
+#loadingCycle {
+    width: 125px;
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 86px;
+}
+
+#todayVibeMessage {
+    width: 290px;
+    height: 41px;
+    font-family: Avenir;
+    font-size: 30px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c2470;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 41px;
+}
+
+#listenOnSpotifyButton {
+    width: 206px;
+    height: 56px;
+    border-radius: 28px;
+    box-shadow: 0 3px 4px 0 rgba(255, 80, 85, 0.6);
+    background-image: linear-gradient(105deg, #f39681, #ff7569 98%);
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: -0.39px;
+    color: #ffffff;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 35px;
+}
+
+#shareButton {
+    width: 206px;
+    height: 56px;
+    border-radius: 28px;
+    box-shadow: 0 3px 4px 0 rgba(255, 80, 85, 0.6);
+    background-image: linear-gradient(105deg, #f39681, #ff7569 98%);
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: -0.39px;
+    color: #ffffff;
+    position: absolute;
+    margin-top: 580px;
+    margin-left: 35px;  
+}
+
+#specificDayVibe {
+    width: 300px;
+    height: 96px;
+    font-family: Avenir;
+    font-size: 35px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.47px;
+    text-align: center;
+    color: #2c2470;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 40px;
 }
 
 #homepage #homeContainer {
@@ -148,8 +355,211 @@ body {
     margin: auto;
 }
 .backButton {
-    width: 10px;
-    height: 19px;
+    width: 15px;
+    height: auto;
     margin-top: 25px;
     margin-left: -305px;
+}
+
+#logInPage #logInContainer {
+    background-image: url('/images/backgroundLogInPage.png');
+    background-position-y: -10px;
+    width:375px;
+    height:99vh;
+    margin: auto;
+    position: relative;
+}
+#logInTitle {
+    width: 200px;
+    height: 55px;
+    font-family: Avenir;
+    font-size: 40px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    color: #2c2470;
+    margin-left: 90px;
+    margin-top: 81px;
+}
+#logInText1{
+    width: 251px;
+    height: 20px;
+    font-family: Avenir;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-align: center;
+    color: #545b8e;
+    margin-left: 62px;
+}
+#facebookLoginButton {
+    width: 283px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #3b5998;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: -0.43px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+#logInButton2 {
+    position: absolute;
+    width: 283px;
+    height: 56px;
+    border-radius: 28px;
+    box-shadow: 0 3px 4px 0 rgba(255, 80, 85, 0.6);
+    background-image: linear-gradient(101deg, #f39681, #ff7569 98%);
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: -0.43px;
+    color: #ffffff;
+    margin-top: 560px;
+}
+#onBoarding1 {
+    background-image: url('/images/onboarding1.png');
+    background-position-y: center;
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+#onBoarding2 {
+    background-image: url('/images/onboarding2.png');
+    background-position-y: center;
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+#onBoarding3 {
+    background-image: url('/images/onboarding3.png');
+    background-position-y: center;
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+#onBoarding4 {
+    background-image: url('/images/onboarding4.png');
+    background-position-y: center;
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+.skipButton {
+    width: 37px;
+    height: 43px;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.39;
+    letter-spacing: normal;
+    color: #ff786b;
+    border: none;
+    background-color: inherit;
+    margin-left: -25px;
+    margin-top: 630px;
+    position: absolute;
+}
+.nextButton {
+    width: 37px;
+    height: 43px;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.39;
+    letter-spacing: normal;
+    color: #ff786b;
+    border: none;
+    background-color: inherit;
+    margin-left: 250px;
+    margin-top: 630px;
+    position: absolute;
+}
+
+#spotifyTrackArt {
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 56px;
+}
+
+#spotifyTrackArt2 {
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 50px;
+}
+
+#songTitle {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 150px;
+    margin-top: 360px;
+}
+
+#artistName {
+    font-family: Avenir;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 159px;
+    margin-top: 380px;
+}
+
+#songTitle2 {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 150px;
+    margin-top: 360px;
+}
+
+#artistName2 {
+    font-family: Avenir;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 160px;
+    margin-top: 380px;
 }
