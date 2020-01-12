@@ -45,18 +45,34 @@ class SpotifyManager:
         audioFeatures = self.spotifyObject.audio_features(tracks)
         return audioFeatures
 
-    # Return useful audio features + song title and artist name
+    # Return a list of recommended tracks for one to five seeds
+    def getRecommendations(self, tracks, limit=10):
+        songData = {}
+        result = []
+        recommendationTracks = self.spotifyObject.recommendations(seed_tracks=tracks, limit=limit)
+        for track in recommendationTracks['tracks']:
+            songData['name'] = track['name']
+            songData['artist'] = track['artists'][0]['name']
+            songData['uri'] = track['uri']
+            songData['albumPic'] = track['album']['images'][0]['url']
+
+            result.append(songData)
+            songData = {}
+
+        return result
+
+    # Return a list of audio features + track and artist name for user's top tracks
     def parseAudioFeatures(self, limit=20):
         data = {}
         result = []
         topTracks = self.spotifyObject.current_user_top_tracks(limit=limit)
         for item in topTracks['items']:
-
             uri = item['uri']
             audioFeatures = self.getAudioFeatures(uri)
 
-            data["name"] = item["name"]
-            data["artist"] = item["artists"][0]["name"]
+            data['name'] = item['name']
+            data['artist'] = item['artists'][0]['name']
+            data['uri'] = audioFeatures[0]['uri']
             data['danceability'] = audioFeatures[0]['danceability']
             data['energy'] = audioFeatures[0]['energy']
             data['key'] = audioFeatures[0]['key']
@@ -73,10 +89,16 @@ class SpotifyManager:
             data = {}
 
         return result
+
      
 # Use this if you want to print json files nicely
 # print(json.dumps(VARIABLE, sort_keys=True, indent=4))
 
 # Initialize the SpotifyManager class with the specified Spotify User ID
 spManager = SpotifyManager('12160864262')
-print(json.dumps(spManager.parseAudioFeatures(10), sort_keys=False, indent=4))
+
+# example for using parseAudioFeatures():
+# print(json.dumps(spManager.parseAudioFeatures(1), sort_keys=False, indent=4))
+
+# example for using getRecommendations() - uri: spotify:track:1uRxyAup7OYrlh2SHJb80N
+# print(json.dumps(spManager.getRecommendations(['spotify:track:1uRxyAup7OYrlh2SHJb80N']), sort_keys=True, indent=4))
