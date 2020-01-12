@@ -6,8 +6,27 @@
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
     <body>
-        <div id="container">
-            <p id="content"> I have a fixed width so you can only see me and the body if your monitor has enough pixels. Otherwise you will just see me, the container</p>
-        </div>
+        <section id="landingPage">
+            <div id="onboardingBackground">
+                <img id="hamburgerMenu" src="/images/hamburgerMenu.png">
+                <div id="date">January 12, 2020</div>
+                <div id="greetingMessage">Hi, Nicole. <br><br>How was your day?</div>
+                <button type="button" id="recordAudioButton" onclick="hideShow('landingPage', 'audioRecordingPage');">Record Audio</button>
+                <button type="button" id="writeEntryButton">Write Entry</button>
+            </div>
+        </section>
+        <section id="audioRecordingPage">
+            <div id="onboardingBackground">
+                <input id="minimizeButton" type="image" src="/images/minimizeButton.png" class="btTxt submit" onclick="hideShow('audioRecordingPage', 'landingPage');"/>
+                <div id="audioRecordingMessage">Audio Recording</div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            function hideShow(hidePage, showPage) {
+                document.getElementById(hidePage).style.display="none";
+                document.getElementById(showPage).style.display="block";
+            }
+         </script>
     </body>
 </html>
