@@ -251,7 +251,7 @@ body {
     color: #2c2470;
     position: absolute;
     margin-top: 110px;
-    margin-left: 31px;
+    margin-left: 41px;
 }
 
 #listenOnSpotifyButton {
@@ -306,7 +306,7 @@ body {
     color: #2c2470;
     position: absolute;
     margin-top: 25px;
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 #homepage #homeContainer {
@@ -490,4 +490,76 @@ body {
     margin-left: 250px;
     margin-top: 630px;
     position: absolute;
+}
+
+#spotifyTrackArt {
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 56px;
+}
+
+#spotifyTrackArt2 {
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 50px;
+}
+
+#songTitle {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 150px;
+    margin-top: 360px;
+}
+
+#artistName {
+    font-family: Avenir;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 159px;
+    margin-top: 380px;
+}
+
+#songTitle2 {
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 900;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 150px;
+    margin-top: 360px;
+}
+
+#artistName2 {
+    font-family: Avenir;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    position: absolute;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2c2470;
+    margin-left: 160px;
+    margin-top: 380px;
 }
