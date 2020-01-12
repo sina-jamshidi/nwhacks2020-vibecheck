@@ -61,6 +61,7 @@ class SpotifyManager:
             data['energy'] = audioFeatures[0]['energy']
             data['key'] = audioFeatures[0]['key']
             data['loudness'] = audioFeatures[0]['loudness']
+            data['mode'] = audioFeatures[0]['mode']
             data['speechiness'] = audioFeatures[0]['speechiness']
             data['acousticness'] = audioFeatures[0]['acousticness']
             data['instrumentalness'] = audioFeatures[0]['instrumentalness']
