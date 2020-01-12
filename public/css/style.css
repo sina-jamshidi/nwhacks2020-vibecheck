@@ -6,7 +6,7 @@ body {
 }
 
 #onboardingBackground {
-    background-image: url('/images/background.png');
+    background-image: url('/images/backgroundMainFlow.png');
     width:375px;
     height:99vh;
     margin: auto;
@@ -86,12 +86,6 @@ body {
     margin-right: 82px;
 }
 
-
-.backButton {
-    margin-top: 25px;
-    margin-left: -305px;
-}
-
 #audioRecordingMessage {
     width: 293px;
     height: 53px;
@@ -106,4 +100,56 @@ body {
     position: absolute;
     margin-top: 100px;
     margin-left: 42px;
+}
+
+#homepage #homeContainer {
+    background-image: url('/images/backgroundHomepage.png');
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+#homepage #getStartedButton {
+    width: 283px;
+    height: 56px;
+    border-radius: 28px;
+    margin-top: 565px;
+    box-shadow: 0 3px 4px 0 rgba(255, 80, 85, 0.6);
+    background-image: linear-gradient(101deg, #f39681, #ff7569 98%);
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: -0.43px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+#homepage #logInButton {
+    width: 283px;
+    height: 56px;
+    border-radius: 28px;
+    box-shadow: 0 2px 4px 0 #afd2c1;
+    background-color: #9ec1b0;
+    border-radius: 28px;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: -0.43px;
+    color: #ffffff;
+}
+#logInPage #logInContainer {
+    background-color: #ffffff;
+    width:375px;
+    height:99vh;
+    margin: auto;
+}
+.backButton {
+    width: 10px;
+    height: 19px;
+    margin-top: 25px;
+    margin-left: -305px;
 }

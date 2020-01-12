@@ -6,6 +6,18 @@
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
     <body>
+        <section id="homepage">
+            <div id="homeContainer">
+                <button type="button" id="getStartedButton">Get Started</button>
+                <button type="button" id="logInButton" onclick="hideShow('homepage','logInPage')">Log in with Spotify</button>
+            </div>
+        </section>
+        <section id="logInPage" style="display: none;">
+            <div id="logInContainer">
+                <input id="logInBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('logInPage', 'homepage');"/>
+            </div>
+        </section>
+
         <section id="landingPage">
             <div id="onboardingBackground">
                 <img id="hamburgerMenu" src="/images/hamburgerMenu.png">
@@ -17,8 +29,8 @@
         </section>
         <section id="audioRecordingPage">
             <div id="onboardingBackground">
-                <input id="minimizeButton" type="image" src="/images/minimizeButton.png" class="btTxt submit" onclick="hideShow('audioRecordingPage', 'landingPage');"/>
-                <div id="audioRecordingMessage">Audio Recording</div>
+                <input id="audioRecordBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('audioRecordingPage', 'landingPage');"/>
+                <div id="audioRecordingMessage">Audio</div>
             </div>
         </section>
 
