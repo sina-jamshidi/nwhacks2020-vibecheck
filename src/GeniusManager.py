@@ -16,6 +16,7 @@ class GeniusManager:
     def getLyrics(self, songlst):
         genius = lyricsgenius.Genius(self.accessToken)
         genius.remove_section_headers = True
+        
         for i in range(len(songlst)):
             songTitle = songlst[i]["name"]
             songArtist = songlst[i]["artist"]
@@ -25,6 +26,9 @@ class GeniusManager:
 
             
             geniusSong = genius.search_song(songTitle,artist=songArtist, get_full_info=False)
+            if not geniusSong:
+                songlst[i] = {'lyrics':None}
+                continue
             songlst[i]['lyrics'] = geniusSong.lyrics.replace("\n"," ")
             if songArtist.lower() not in geniusSong.artist.lower():
                 songlst[i]['lyrics'] = None
