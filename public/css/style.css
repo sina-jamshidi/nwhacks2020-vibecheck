@@ -161,10 +161,10 @@ body {
 }
 
 #pauseStopIcons {
-    width:30%;
+    width:200px;
     position: absolute;
     margin-top: 520px;
-    margin-left: 30px;
+    margin-left: 45px;
 }
 
 #microphone {
@@ -183,10 +183,10 @@ body {
 }
 
 #playIcons {
-    width: 22%;
+    width: 150px;
     position: absolute;
     margin-top: 520px;
-    margin-left: 30px;
+    margin-left: 42px;
 }
 
 #floppyDisk {
@@ -231,7 +231,7 @@ body {
 }
 
 #loadingCycle {
-    width: 15%;
+    width: 125px;
     position: absolute;
     margin-top: 330px;
     margin-left: 86px;
