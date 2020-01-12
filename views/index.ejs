@@ -6,8 +6,39 @@
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
     <body>
-        <div id="container">
-            <p id="content"> I have a fixed width so you can only see me and the body if your monitor has enough pixels. Otherwise you will just see me, the container</p>
-        </div>
+        <section id="homepage">
+            <div id="homeContainer">
+                <button type="button" id="getStartedButton">Get Started</button>
+                <button type="button" id="logInButton" onclick="hideShow('homepage','logInPage')">Log in with Spotify</button>
+            </div>
+        </section>
+        <section id="logInPage" style="display: none;">
+            <div id="logInContainer">
+                <input id="logInBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('logInPage', 'homepage');"/>
+            </div>
+        </section>
+
+        <section id="landingPage">
+            <div id="onboardingBackground">
+                <img id="hamburgerMenu" src="/images/hamburgerMenu.png">
+                <div id="date">January 12, 2020</div>
+                <div id="greetingMessage">Hi, Nicole. <br><br>How was your day?</div>
+                <button type="button" id="recordAudioButton" onclick="hideShow('landingPage', 'audioRecordingPage');">Record Audio</button>
+                <button type="button" id="writeEntryButton">Write Entry</button>
+            </div>
+        </section>
+        <section id="audioRecordingPage">
+            <div id="onboardingBackground">
+                <input id="audioRecordBack" class="backButton" type="image" src="/images/backButton.png" onclick="hideShow('audioRecordingPage', 'landingPage');"/>
+                <div id="audioRecordingMessage">Audio</div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            function hideShow(hidePage, showPage) {
+                document.getElementById(hidePage).style.display="none";
+                document.getElementById(showPage).style.display="block";
+            }
+         </script>
     </body>
 </html>
