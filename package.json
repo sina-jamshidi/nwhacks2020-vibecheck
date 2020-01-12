@@ -1,0 +1,23 @@
+{
+  "name": "nwhacks2020-vibecheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sina-jamshidi/nwhacks2020-vibecheck.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sina-jamshidi/nwhacks2020-vibecheck/issues"
+  },
+  "homepage": "https://github.com/sina-jamshidi/nwhacks2020-vibecheck#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}

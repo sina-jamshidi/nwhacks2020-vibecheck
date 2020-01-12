@@ -1,0 +1,17 @@
+body {
+    background-image: url('../images/background.png');
+    color:#000;
+    background-color:white;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 1%;
+}
+
+#container {
+    background-image: url('../images/background.png');
+    width:375px;
+    height:99vh;
+    color:#fff;
+    background-color:red;
+    margin: auto;
+}
