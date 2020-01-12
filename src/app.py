@@ -11,9 +11,23 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/record/", methods=['GET'])
+def record_voice():
+    getEmotion = GetEmotion()
+    journal_emotion, journal_entry = getEmotion.getEmotionFromSpeech()
+
+    return {"journal_emotion":str(journal_emotion), "journal_entry":str(journal_entry)}
+
+
 
 @app.route("/get_song/", methods=['GET'])
 def get_playlist():
+    journal_emotion = request.args.get('journalem')
+    journal_entry = request.args.get('journalen')
+
+    print(journal_emotion)
+    print(journal_entry)
+
     getEmotion = GetEmotion()
     spotify = SpotifyManager("12160864262")
     moodFromSong = GetMoodFromSong()
@@ -22,11 +36,7 @@ def get_playlist():
     top_songs = spotify.getTopTracks(limit=10)
     top_song_features = spotify.getAudioFeatures(top_songs)
 
-    journal_emotion, journal_entry = getEmotion.getEmotionFromSpeech()
-
     matching_moods_indices = moodFromSong.getMatches(top_song_features, journal_emotion)
-
-    print(len(top_songs))
 
     matching_songs = []
     for i, song in enumerate(top_songs):
@@ -42,7 +52,7 @@ def get_playlist():
     lyrics = genius.getLyrics(recommended_songs)
 
     compareTexts = CompareTexts(journal_emotion)
-    
+
     top_song = compareTexts.compareTexts(journal_entry, lyrics)
 
     return top_song
@@ -59,31 +69,6 @@ def getMatchingSongs(emotion):
     else:
         song = {'name': 'Say Something', 'artist': 'A Great Big World', 'uri': 'spotify:track:5TvE3pk05pyFIGdSY9j4DJ', 'danceability': 0.407, 'energy': 0.147, 'key': 2, 'loudness': -8.822, 'mode': 1, 'speechiness': 0.0355, 'acousticness': 0.857, 'instrumentalness': 2.89e-06, 'liveness': 0.0913, 'valence': 0.0765, 'tempo': 141.284}
     return song
-
-# @app.route("/run_text_analysis/", methods=['GET'])
-# def call_ap():
-#     my_ap = AnalysisPipeline()
-
-#     result = my_ap.getAndAnalyzeSpeech()
-
-#     print(result)
-#     return result
-
-
-# @app.route("/get_happy_sad/", methods=['GET'])
-# def call_happy_sad():
-#     my_vis = Viz()
-#     result = my_vis.happy_or_sad()
-#     print(result)
-#     return result
-
-# @app.route("/get_word_assoc/", methods=['GET'])
-# def call_word_assoc():
-#     my_vis = Viz()
-#     result = my_vis.wordAssociation()
-#     print(result)
-#     return jsonify(result)
-
 
 if __name__ == "__main__":
     app.run()

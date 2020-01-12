@@ -61,9 +61,8 @@ class CompareTexts():
         semanticAnalysis_lyrics = sentiments[1:]
 
         semantic_differences = abs(semanticAnalysis_journal - np.array(semanticAnalysis_lyrics))
-
         # map emotions
-        lyrics_list = [song['lyrics'] for song in songs]
+        lyrics_list = [song['lyrics'] for song in songs if song['lyrics']]
         emotion_lyrics = self.getEmotion.getBatchEmotionFromText(lyrics_list)
 
         emotions = [self.emotion_journal] + emotion_lyrics
@@ -83,11 +82,23 @@ class CompareTexts():
         emotion_lyrics_normalized = (np.array(emotion_int[1:])-0)/5
         emotion_differences = abs(emotion_journal_normalized - emotion_lyrics_normalized)
 
+        if len(semantic_differences) > len(emotion_differences):
+            diff = len(semantic_differences) - len(emotion_differences)
+            semantic_differences = semantic_differences[diff:]
+        elif len(emotion_differences) > len(semantic_differences):
+            diff = len(emotion_differences) - len(semantic_differences)
+            emotion_differences = emotion_differences[diff:]
+
         average_differences = (semantic_differences + emotion_differences)/2
 
         top_song_index = np.argmax(average_differences)
 
         top_song = songs[top_song_index]
+
+        if top_song['lyrics'] is None:
+            for i in range(len(songs)):
+                if songs[i]['lyrics']:
+                    return songs[i]
 
         return top_song
 

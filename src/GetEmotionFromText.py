@@ -4,7 +4,7 @@ import numpy as np
 
 class GetEmotion():
     def __init__(self):
-        self.api_key = "ummy23a5LPIem4Hpt0EDtVuBg7e9WL2IUncFgg53SOA"
+        self.api_key = "oCE90SarO5dry0aFG8UbsikB7FPkJRLSqaOgwSgJMHY"
         paralleldots.set_api_key(self.api_key)
 
     def getEmotionFromText(self, text):
@@ -18,8 +18,6 @@ class GetEmotion():
         return emotion
 
     def getBatchEmotionFromText(self, texts):
-        if len(texts) == 0:
-            texts = ["lyrics are great"]
         predictions = paralleldots.batch_emotion(texts)
         emotions = []
         for prediction in predictions['emotion']:
